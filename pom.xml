@@ -82,11 +82,22 @@
 			<groupId>fish.payara.cloud.connectors.kafka</groupId>
 			<artifactId>kafka-jca-api</artifactId>
 			<version>0.6.1-SNAPSHOT</version>
-			<!-- 
 			<exclusions>
 				<exclusion>
 					<artifactId>*</artifactId>
 					<groupId>*</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+			<dependency>
+			<groupId>org.apache.kafka</groupId>
+			<artifactId>kafka-clients</artifactId>
+			<version>2.5.0</version>
+			<!-- 
+			<exclusions>
+				<exclusion>
+					<groupId>*</groupId>
+					<artifactId>*</artifactId>
 				</exclusion>
 			</exclusions>
 			-->
