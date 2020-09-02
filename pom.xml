@@ -40,19 +40,15 @@
 							<artifactId>es.caixagalicia.ifrt.jboss.kafka</artifactId>
 							<bundleFileName>es.caixagalicia.ifrt.jboss.kafka.jar</bundleFileName>
 						</ejbModule>
+						<!-- Va incluido dentro del resource adapter, la tenemos usamos por el hecho de tener
+						definido la dependencia con el resource adapter en el jboss-deployment-structure  -->
+						<!-- 
 						<jarModule>
-						 
 							<groupId>fish.payara.cloud.connectors.kafka</groupId>
 							<artifactId>kafka-jca-api</artifactId>
 							<bundleFileName>kafka-jca-api.jar</bundleFileName>
-							
-						
-							
 						</jarModule>
-
-						<!-- <jarModule> <groupId>org.apache.kafka</groupId> <artifactId>kafka-clients</artifactId> 
-							<bundleFileName>kafka-clients.jar</bundleFileName> <bundleDir>${destinationJarDir}</bundleDir> 
-							</jarModule> -->
+						 -->
 					</modules>
 				</configuration>
 			</plugin>
@@ -80,6 +76,7 @@
 		</dependency>
 		<dependency>
 			<groupId>fish.payara.cloud.connectors.kafka</groupId>
+			<scope>provided</scope>
 			<artifactId>kafka-jca-api</artifactId>
 			<version>0.6.1-SNAPSHOT</version>
 			<exclusions>
